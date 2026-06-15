@@ -10,7 +10,7 @@ PokAR turns Spectacles into a hands-on Texas Hold'em coach. Practice heads-up ag
 
 <!-- Add your trailer / demo video here -->
 
-> **▶️ Watch the trailer:** _coming soon_
+> **▶️ Watch the trailer:
 
 <!--
 Embed options:
@@ -18,6 +18,12 @@ Embed options:
   [![PokAR Trailer](path/to/thumbnail.png)](https://youtube.com/your-video)
 - Or drag-and-drop an MP4 directly into the GitHub README editor.
 -->
+
+
+
+https://github.com/user-attachments/assets/b937b3a3-2ced-41b4-9558-1c631848c2db
+
+
 
 ---
 
