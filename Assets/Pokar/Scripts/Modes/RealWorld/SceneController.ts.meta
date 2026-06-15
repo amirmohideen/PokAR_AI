@@ -1,0 +1,80 @@
+- !<AssetImportMetadata/0a7651da-63dc-40f3-81eb-6d5342acab2d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0803703a-db07-4a6d-82b2-18f530384aa5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0803703a-db07-4a6d-82b2-18f530384aa5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9c141cac-b073-4009-84ed-e1d0ed00e9aa
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9c141cac-b073-4009-84ed-e1d0ed00e9aa>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 41b593e5-463f-4c3e-8169-cc2135c92f2f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoCapture: false
+    autoCaptureSwitch: false
+    captureButton: false
+    captureDelay: false
+    debugVisualizer: false
+    depthCache: false
+    gemini: false
+    handMenu: false
+    loading: false
+    responseUI: false
+    showDebugVisuals: false
+    speechText: false
+    speechUI: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - showDebugVisuals: false
+      debugVisualizer: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      speechUI: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      gemini: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      responseUI: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      loading: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      depthCache: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      speechText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      handMenu: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      autoCapture: true
+      captureDelay: 0.400000
+      autoCaptureSwitch: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      captureButton: !<MappingBased.AssignableType_8> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input bool showDebugVisuals {"hint":"Show debug visuals in the scene"}'
+    - '// @input AssignableType debugVisualizer {"hint":"Visualizes the captured camera frame for debugging"}'
+    - '// @input AssignableType_1 speechUI {"hint":"Handles the pinch bubble UI"}'
+    - '// @input AssignableType_2 gemini {"hint":"Calls the Gemini API for poker analysis"}'
+    - '// @input AssignableType_3 responseUI {"hint":"Displays the analysis result text"}'
+    - '// @input AssignableType_4 loading {"hint":"Loading visual"}'
+    - '// @input AssignableType_5 depthCache {"hint":"Caches the camera frame for capture"}'
+    - '// @input Component.Text speechText {"hint":"Main status text (shows the win percentage)"}'
+    - '// @input AssignableType_6 handMenu {"hint":"Palm hand-menu that shows the live win %."}'
+    - '// @input bool autoCapture = true {"hint":"Start with continuous auto-capture enabled. The in-scene Auto-Capture switch can override this at runtime."}'
+    - '// @input float captureDelay = 0.4 {"hint":"Seconds between auto-captures (camera settle + API throttle). Only used when auto-capture is on."}'
+    - '// @input AssignableType_7 autoCaptureSwitch {"hint":"In-scene Auto-Capture On/Off switch (SpectaclesUIKit Switch)."}'
+    - '// @input AssignableType_8 captureButton {"hint":"Manual Capture button — captures one frame regardless of the auto-capture toggle."}'

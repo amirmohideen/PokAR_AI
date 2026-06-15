@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/b476331f-ca69-4327-bf0c-78b0aba46400>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c93f2fda-3baf-4389-8226-df13d33ee266
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c93f2fda-3baf-4389-8226-df13d33ee266
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9982ffd9-1789-45c1-88c3-ced80452ca1c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9982ffd9-1789-45c1-88c3-ced80452ca1c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: f388a81b-d6f2-42cc-83bb-3dffbbafe5da
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backendUrl: false
+    enableLogging: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - backendUrl: "http://192.168.1.42:3333"
+      enableLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">CaptureSession – Resolution × Compression matrix</span><br/><span style=\"color: #94A3B8; font-size: 11px;\">20 s startup → 20 rounds × 15 s (4 resolutions × 5 compression levels).</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Network</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Network"}'
+    - '// @input string backendUrl = "http://192.168.1.42:3333" {"hint":"Base URL of your backend, e.g. http://192.168.1.42:3333"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Debug</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool enableLogging = true {"hint":"Print verbose status messages"}'
+    - '// @ui {"widget":"group_end"}'

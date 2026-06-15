@@ -1,0 +1,74 @@
+- !<ObjectPrefab/2a01287c-9d04-4905-a8eb-a0222515294b>
+  PackagePath: ""
+  objects:
+    - !<own> a860ce54-9d54-423b-b365-1ba2a1e9e55f
+  LazyLoading: false
+  RetainAssets: true
+- !<LookAtComponent/0a704b32-a325-4e20-a539-530e4be4ddad>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtPoint
+  AimVectors: NegativeZAimYUp
+  WorldUpVector: SceneY
+  Target: !<reference> 00000000-0000-0065-0000-000000000064
+  OffsetRotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+- !<ScriptComponent/2dca038e-f63d-43d0-bec5-2efb0cd35b6b>
+  PrefabRemaps:
+    []
+  Name: BoundingFrame
+  Enabled: true
+  ScriptAsset: !<reference> 0fa0ffca-3801-48c2-925b-0f2f0f40ea37
+  ScriptInputsDefault:
+    verticalOffset: true
+    animationDuration: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      verticalOffset: !<float> 0.000000
+      animationDuration: 0.400000
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/51d678d5-a730-4027-a3bc-65781e1c9d25>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 38bfd552-aae0-4e2e-9230-9087746ad1da
+  Mesh: !<reference> 4019f85d-3192-4e88-b7fe-5cdbc66e1fa9
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/a860ce54-9d54-423b-b365-1ba2a1e9e55f>
+  PrefabRemaps:
+    - 0a704b32-a325-4e20-a539-530e4be4ddad: 0a704b32-a325-4e20-5ac6-acf1b41b2252
+    - 2dca038e-f63d-43d0-bec5-2efb0cd35b6b: 525d7cc4-72f3-4833-a600-777b805e0325
+    - 51d678d5-a730-4027-a3bc-65781e1c9d25: 51d678d5-a730-4027-5c43-9a87e1e362da
+    - a860ce54-9d54-423b-b365-1ba2a1e9e55f: a860ce54-9d54-423b-4c9a-e45d5e161aa0
+  Name: Plane
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 13.974027, y: 13.173340, z: 0.000000}
+    Rotation: {x: 72.729164, y: 19.256905, z: -180.000000}
+    Scale: {x: 54.086243, y: 48.111988, z: 49.371178}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 51d678d5-a730-4027-a3bc-65781e1c9d25
+    - !<own> 0a704b32-a325-4e20-a539-530e4be4ddad
+    - !<own> 2dca038e-f63d-43d0-bec5-2efb0cd35b6b

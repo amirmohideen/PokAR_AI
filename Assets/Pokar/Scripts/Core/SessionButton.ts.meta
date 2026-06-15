@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/e36a2a14-e860-4d61-bce2-ed696eec1247>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> be99bef8-1cc1-4256-ae54-0ae29c088398
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> be99bef8-1cc1-4256-ae54-0ae29c088398
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 89af4712-df4d-4600-a49f-6ecc205bf897
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/89af4712-df4d-4600-a49f-6ecc205bf897>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 661ff2f4-f2fa-4439-b8c8-c1e747c81ffe
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    button: false
+    gameManager: false
+    label: false
+    mainMenu: false
+    placement: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - button: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      label: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      gameManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      mainMenu: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      placement: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">SessionButton — Reset (menu) / Menu (in game)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType button {"hint":"The Reset button (UIKit CapsuleButton). Set its Add Callbacks to false."}'
+    - "// @input Component.Text label {\"hint\":\"The button's label Text (switches between \\\"Reset\\\" and \\\"Menu\\\").\"}"
+    - // @input AssignableType_1 gameManager
+    - // @input AssignableType_2 mainMenu
+    - '// @input AssignableType_3 placement {"hint":"The Surface-Placement Example component (for re-positioning in the menu)."}'

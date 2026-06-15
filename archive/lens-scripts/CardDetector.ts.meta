@@ -1,0 +1,85 @@
+- !<AssetImportMetadata/76a4c02c-f4ca-4eab-9aed-b0fc0fd56f4e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 248461db-765a-4449-9434-c65902dde215
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 248461db-765a-4449-9434-c65902dde215
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8c1aa7df-14ec-4c0c-a606-c8ee3d0770f7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8c1aa7df-14ec-4c0c-a606-c8ee3d0770f7>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 4482132c-33c9-4906-9a2e-07487b868449
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    apiKey: false
+    confidenceThreshold: false
+    detectionPrefab: false
+    logCompact: false
+    logOnlyDetections: false
+    logRawJson: false
+    maxDetections: false
+    modelPath: false
+    resolution: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - apiKey: ElXFfdS0MxKgYLAu2sqF
+      modelPath: playing-cards-4fnhs/1
+      confidenceThreshold: !<float> 40.000000
+      resolution: !<float> 640.000000
+      detectionPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      maxDetections: !<float> 10.000000
+      logRawJson: true
+      logCompact: false
+      logOnlyDetections: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">CardDetector – Paired-detection placement</span><br/><span style=\"color: #94A3B8; font-size: 11px;\">One prefab per card class detected exactly twice — placed at the 2D midpoint.</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Roboflow</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Roboflow"}'
+    - '// @input string apiKey = "ElXFfdS0MxKgYLAu2sqF" {"hint":"Your Roboflow API key"}'
+    - '// @input string modelPath = "playing-cards-muou8/10" {"hint":"Model path: {project}/{version}"}'
+    - '// @input float confidenceThreshold = 40 {"hint":"Minimum confidence to include a detection (0–100)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Camera</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Camera"}'
+    - '// @input float resolution = 640 {"hint":"Camera stream resolution in pixels (max 756 on Spectacles 2024)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">3D Placement</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Placement"}'
+    - '// @input Asset.ObjectPrefab detectionPrefab {"hint":"Prefab with a Text component — one instance per paired card"}'
+    - '// @input float maxDetections = 10 {"hint":"Maximum number of cards to display simultaneously (pool size)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Debug</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool logRawJson = true {"hint":"Print full raw JSON from every inference call"}'
+    - '// @input bool logCompact {"hint":"Only show paired cards in log (overrides logRawJson)"}'
+    - '// @input bool logOnlyDetections {"hint":"Only log when paired cards are found (reduces noise)"}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,74 @@
+- !<AssetImportMetadata/111e381c-67f8-48cf-9f3b-a86a89e5abd0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 062bb5e3-9dea-4161-b416-3f3c4650df9a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 062bb5e3-9dea-4161-b416-3f3c4650df9a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 748fd7b3-9a7f-4b9a-bec0-5ab65a214aec
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/748fd7b3-9a7f-4b9a-bec0-5ab65a214aec>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6d4c37fc-9c5e-440e-8424-0ec0ca55814d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    camObject: false
+    forwardOffset: false
+    handType: false
+    labelText: false
+    panelRoot: false
+    percentText: false
+    requirePalmFacing: false
+    samples: false
+    sideOffset: false
+    upOffset: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      percentText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      labelText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      handType: left
+      requirePalmFacing: true
+      samples: !<float> 100.000000
+      camObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sideOffset: !<float> 14.000000
+      upOffset: !<float> 3.000000
+      forwardOffset: !<float> 4.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">HandStrengthMenu — palm menu showing win %</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject panelRoot {"hint":"Panel root (the UIKit Frame object) moved to the palm and shown/hidden."}'
+    - '// @input Component.Text percentText {"hint":"Large Text showing the win percentage, e.g. \"73%\"."}'
+    - '// @input Component.Text labelText {"hint":"Small Text showing the hand label, e.g. \"Pair of Kings\"."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input string handType = "left" {"hint":"Which hand the menu attaches to.", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Right", "value":"right"}]}'
+    - '// @input bool requirePalmFacing = true {"hint":"Only show the menu while that palm faces you (like a classic hand menu)."}'
+    - '// @input float samples = 100 {"hint":"Monte Carlo draws simulated per estimate."}'
+    - '// @input SceneObject camObject {"hint":"Camera object — used to place the panel beside the hand and orient it."}'
+    - '// @input float sideOffset = 14 {"hint":"Offset beside the hand (cm) along camera-right. Negative puts it on the other side."}'
+    - '// @input float upOffset = 3 {"hint":"Offset above the hand (cm) along camera-up."}'
+    - '// @input float forwardOffset = 4 {"hint":"Offset toward the camera (cm), lifting it off the palm."}'

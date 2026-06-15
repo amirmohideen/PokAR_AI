@@ -1,0 +1,86 @@
+- !<AssetImportMetadata/20223290-97ab-d7b3-1056-450de300102d>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 2a01287c-9d04-4905-a8eb-a0222515294b
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 2a01287c-9d04-4905-a8eb-a0222515294b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> b3cb7b2f-0262-4567-95b1-39cb91808fdf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<LookAtComponent/0a704b32-a325-4e20-5ac6-acf1b41b2252>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtPoint
+  AimVectors: NegativeZAimYUp
+  WorldUpVector: SceneY
+  Target: !<reference> 00000000-0000-0065-0000-000000000064
+  OffsetRotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+- !<RenderMeshVisual/51d678d5-a730-4027-5c43-9a87e1e362da>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 38bfd552-aae0-4e2e-9230-9087746ad1da
+  Mesh: !<reference> 4019f85d-3192-4e88-b7fe-5cdbc66e1fa9
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/525d7cc4-72f3-4833-a600-777b805e0325>
+  PrefabRemaps:
+    []
+  Name: BoundingFrame
+  Enabled: true
+  ScriptAsset: !<reference> 0fa0ffca-3801-48c2-925b-0f2f0f40ea37
+  ScriptInputsDefault:
+    verticalOffset: true
+    animationDuration: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      verticalOffset: !<float> 0.000000
+      animationDuration: 0.400000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/a860ce54-9d54-423b-4c9a-e45d5e161aa0>
+  PrefabRemaps:
+    []
+  Name: Plane
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 13.974027, y: 13.173340, z: 0.000000}
+    Rotation: {x: 72.729164, y: 19.256905, z: -180.000000}
+    Scale: {x: 54.086243, y: 48.111988, z: 49.371178}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 51d678d5-a730-4027-5c43-9a87e1e362da
+    - !<own> 0a704b32-a325-4e20-5ac6-acf1b41b2252
+    - !<own> 525d7cc4-72f3-4833-a600-777b805e0325
+- !<ObjectPrefabAssetData/b3cb7b2f-0262-4567-95b1-39cb91808fdf>
+  Prototype: !<ObjectOwner/64bc023d-e7ff-422a-b9db-7faef61a5956>
+    PackagePath: ""
+    objects:
+      - !<own> a860ce54-9d54-423b-4c9a-e45d5e161aa0

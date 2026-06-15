@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/c3690588-0183-4928-a593-fad58fa2a8fc>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 596b5e44-9778-4fb7-bba7-ac8ebbc1a786
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 596b5e44-9778-4fb7-bba7-ac8ebbc1a786
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 841d46b9-2627-4225-baf0-5adeaf8c7922
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/841d46b9-2627-4225-baf0-5adeaf8c7922>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3e7936d7-1b46-4c5a-9f8c-b1c7bd0ec273
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    betController: false
+    callAmount: false
+    callButton: false
+    foldButton: false
+    raiseButton: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - foldButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      callButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      raiseButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      betController: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      callAmount: !<float> 10.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">ActionButtons — Fold / Call / Raise</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - // @input AssignableType foldButton
+    - // @input AssignableType_1 callButton
+    - // @input AssignableType_2 raiseButton
+    - '// @input AssignableType_3 betController {"hint":"BetController used to commit the bet on Call / Raise."}'
+    - '// @input float callAmount = 10 {"hint":"Default amount used for Call if the current bet is 0."}'

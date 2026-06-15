@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/512efede-91f6-4977-a20b-191579876a14>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e8b96147-80c6-49d2-b8fe-0ca04df27bdf
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e8b96147-80c6-49d2-b8fe-0ca04df27bdf
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1baac371-8669-4406-9fa5-4866a16fd4d9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1baac371-8669-4406-9fa5-4866a16fd4d9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 04872226-fbfe-4816-bd78-45da4ea94ec9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    camera: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - camera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject camera

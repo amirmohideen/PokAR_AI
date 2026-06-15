@@ -1,0 +1,96 @@
+- !<AssetImportMetadata/27c87a9e-d14b-448a-8051-b72d02ff8912>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 402ab352-3ed1-4d0b-a638-6e9e55a4a9c9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 402ab352-3ed1-4d0b-a638-6e9e55a4a9c9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> aeae5f56-bf1f-4e19-b634-a07fed2056da
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/aeae5f56-bf1f-4e19-b634-a07fed2056da>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 01fb4e77-5198-4fe3-bc2c-2d908f84c915
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    debugLogging: false
+    gameManager: false
+    hideOnSelect: false
+    hoverDistance: false
+    liftAmount: false
+    menuRoot: false
+    multiplayerButton: false
+    multiplayerCard: false
+    multiplayerEnabled: false
+    multiplayerLabel: false
+    realWorldButton: false
+    realWorldCard: false
+    realWorldLabel: false
+    singlePlayerButton: false
+    singlePlayerCard: false
+    singlePlayerLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - gameManager: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      menuRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      singlePlayerButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      multiplayerButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      realWorldButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      singlePlayerCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      singlePlayerLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      multiplayerCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      multiplayerLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      realWorldCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      realWorldLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      multiplayerEnabled: false
+      hideOnSelect: true
+      hoverDistance: !<float> 15.000000
+      liftAmount: 0.200000
+      debugLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">MainMenu — pick a game mode on the table</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType gameManager {"hint":"The GameManager whose mode this menu switches."}'
+    - '// @input SceneObject menuRoot {"hint":"Root object containing the menu visuals (hidden after a choice)."}'
+    - '// @ui {"widget":"separator"}'
+    - // @input AssignableType_1 singlePlayerButton
+    - // @input AssignableType_2 multiplayerButton
+    - // @input AssignableType_3 realWorldButton
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"Optional per-button card visual + label. Left empty, the card defaults to the button object and the label is auto-detected from it."}'
+    - // @input SceneObject singlePlayerCard
+    - // @input Component.Text singlePlayerLabel
+    - // @input SceneObject multiplayerCard
+    - // @input Component.Text multiplayerLabel
+    - // @input SceneObject realWorldCard
+    - // @input Component.Text realWorldLabel
+    - '// @ui {"widget":"separator"}'
+    - '// @input bool multiplayerEnabled {"hint":"Multiplayer is not supported yet — when false, its button ignores presses and touches."}'
+    - '// @input bool hideOnSelect = true {"hint":"Hide the menu after a mode is selected."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input float hoverDistance = 5.625 {"hint":"Fingertip distance (cm) within which a card highlights and lifts."}'
+    - '// @input float liftAmount = 0.2 {"hint":"How far a hovered card lifts on its local +Y axis."}'
+    - '// @input bool debugLogging = true {"hint":"Print fingertip→card distances to the Logger so you can tune hoverDistance. Turn off once tuned."}'

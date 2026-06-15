@@ -1,0 +1,128 @@
+- !<AssetImportMetadata/61da3a2d-16eb-40da-bee5-3a396d6dff71>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7fa8ed8d-0d44-4fdf-97f5-5d6bd7e00a98
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7fa8ed8d-0d44-4fdf-97f5-5d6bd7e00a98
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6d5ba1f9-dd13-4c7f-bbcc-21b215e6d77a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6d5ba1f9-dd13-4c7f-bbcc-21b215e6d77a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 494b205f-c148-4edb-9803-9d72ded05fdc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    actionButtons: false
+    analysisVoiceAudio: false
+    analysisVoiceCooldown: false
+    ante: false
+    autoStart: false
+    betController: false
+    cardPrefab: false
+    cpuMoneyText: false
+    cpuThinkSeconds: false
+    dealSound: false
+    deckStack: false
+    defaultBet: false
+    gameManager: false
+    gameOverSeconds: false
+    handMenu: false
+    highlightPrefab: false
+    hud: false
+    loseSound: false
+    mainMenu: false
+    playerMoneyText: false
+    potText: false
+    revealSeconds: false
+    samples: false
+    speakAnalysisOnPickup: false
+    startingMoney: false
+    tableLayout: false
+    winSound: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cardPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      highlightPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      tableLayout: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      betController: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      actionButtons: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      hud: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      handMenu: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      deckStack: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      playerMoneyText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      cpuMoneyText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      potText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      gameManager: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      mainMenu: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      startingMoney: !<float> 500.000000
+      ante: !<float> 10.000000
+      defaultBet: !<float> 20.000000
+      cpuThinkSeconds: !<float> 1.000000
+      revealSeconds: !<float> 3.000000
+      gameOverSeconds: !<float> 4.000000
+      samples: !<float> 300.000000
+      autoStart: true
+      dealSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      winSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      loseSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      analysisVoiceAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      speakAnalysisOnPickup: true
+      analysisVoiceCooldown: !<float> 8.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @ui {\"widget\":\"label\", \"label\":\"<span style=\\\"color:#60A5FA;\\\">SinglePlayerController — Hold'em vs CPU</span>\"}"
+    - '// @ui {"widget":"separator"}'
+    - // @input Asset.ObjectPrefab cardPrefab
+    - '// @input Asset.ObjectPrefab highlightPrefab {"hint":"Blue quad placed just under each winning card (slightly larger) for a highlight border."}'
+    - // @input AssignableType tableLayout
+    - // @input AssignableType_1 betController
+    - // @input AssignableType_2 actionButtons
+    - '// @ui {"widget":"separator"}'
+    - // @input AssignableType_3 hud
+    - '// @input AssignableType_4 handMenu {"hint":"Palm hand-menu showing your live win % while you watch your hand."}'
+    - '// @input SceneObject deckStack {"hint":"Optional deck-stack object shown during play (the draw pile)."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Component.Text playerMoneyText {"hint":"Text showing your money."}'
+    - "// @input Component.Text cpuMoneyText {\"hint\":\"Text showing the CPU's money.\"}"
+    - '// @input Component.Text potText {"hint":"Text showing the current pot."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType_5 gameManager {"hint":"GameManager — used to return to the menu on game over."}'
+    - '// @input AssignableType_6 mainMenu {"hint":"MainMenu — reopened on game over."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input float startingMoney = 500 {"hint":"Starting money for each player."}'
+    - '// @input float ante = 10 {"hint":"Forced ante posted by each player at the start of a hand."}'
+    - '// @input float defaultBet = 20 {"hint":"Default bet/call size when no chips are staked."}'
+    - '// @input float cpuThinkSeconds = 1 {"hint":"Seconds the CPU \"thinks\" before acting."}'
+    - '// @input float revealSeconds = 3 {"hint":"Seconds to reveal CPU cards / show the result before the next hand."}'
+    - '// @input float gameOverSeconds = 4 {"hint":"Seconds to hold the end-of-game screen before returning to the menu."}'
+    - '// @input float samples = 200 {"hint":"Monte Carlo samples for CPU decisions / hand-strength queries."}'
+    - '// @input bool autoStart = true {"hint":"Auto-start a hand when this mode becomes active."}'
+    - '// @input Component.AudioComponent dealSound {"hint":"AudioComponent played each time a card is dealt."}'
+    - '// @input Component.AudioComponent winSound {"hint":"AudioComponent played when YOU win a hand."}'
+    - '// @input Component.AudioComponent loseSound {"hint":"AudioComponent played when you LOSE a hand."}'
+    - '// @input Component.AudioComponent analysisVoiceAudio {"hint":"AudioComponent used to play short AI hand-analysis voice clips."}'
+    - '// @input bool speakAnalysisOnPickup = true {"hint":"Speak a short analysis when the player picks up their hole cards."}'
+    - '// @input float analysisVoiceCooldown = 8 {"hint":"Seconds between spoken hand-analysis clips."}'

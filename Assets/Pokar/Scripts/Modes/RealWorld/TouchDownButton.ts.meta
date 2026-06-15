@@ -1,0 +1,60 @@
+- !<AssetImportMetadata/fb51e3a9-f3f4-452c-a77c-51e1d87a8c60>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> cf1f3244-8858-43a6-bc34-358995a40f4c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> cf1f3244-8858-43a6-bc34-358995a40f4c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ef77b3da-bc65-4f38-8e4a-74978cd6a39c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ef77b3da-bc65-4f38-8e4a-74978cd6a39c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 896c02c4-57b6-4fc6-a85f-7bc4b8055a86
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    customFunctionForOnButtonPinchedDown: false
+    customFunctionForOnButtonPinchedUp: false
+    editEventCallbacks: false
+    onButtonPinchedDownFunctionNames: false
+    onButtonPinchedUpFunctionNames: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - editEventCallbacks: false
+      customFunctionForOnButtonPinchedDown: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      customFunctionForOnButtonPinchedUp: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onButtonPinchedDownFunctionNames: !<string[]>
+        []
+      onButtonPinchedUpFunctionNames: !<string[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input bool editEventCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callback events\"}"
+    - '// @ui {"widget":"group_start", "label":"On Button Pinched Callbacks", "showIf":"editEventCallbacks"}'
+    - // @input Component.ScriptComponent customFunctionForOnButtonPinchedDown
+    - // @input Component.ScriptComponent customFunctionForOnButtonPinchedUp
+    - "// @input string[] onButtonPinchedDownFunctionNames = {}"
+    - "// @input string[] onButtonPinchedUpFunctionNames = {}"
+    - '// @ui {"widget":"group_end"}'

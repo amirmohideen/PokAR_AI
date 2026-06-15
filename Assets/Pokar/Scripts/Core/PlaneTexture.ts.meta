@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/cdc615a8-0d9a-499e-8fa8-54622e0c64e6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 4ca56880-3969-491e-a6b1-7f7517a9bba8
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 4ca56880-3969-491e-a6b1-7f7517a9bba8
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a93f563d-3da7-415a-8eb1-c009226acc21
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a93f563d-3da7-415a-8eb1-c009226acc21>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 07c5be8f-45c6-4b84-b80b-448f0f389477
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cloneMaterial: false
+    texture: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - texture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      cloneMaterial: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.Texture texture {"hint":"Texture to show on this plane."}'
+    - '// @input bool cloneMaterial = true {"hint":"Clone the material first so this does not affect other planes."}'

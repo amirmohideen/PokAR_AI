@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/155cae04-079c-4e60-9f51-0f411d11747c>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 6e7d5a04-d4cf-4647-9af3-ff6b37076ef9
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 6e7d5a04-d4cf-4647-9af3-ff6b37076ef9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> d9ff6c41-251a-404e-9e0d-e6d1d9f1e505
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/1797f097-22e0-4e26-7ef4-074dc984d25e>
+  PrefabRemaps:
+    []
+  Name: SceneController
+  Enabled: true
+  ScriptAsset: !<reference> a9716e2e-4317-4275-84c5-7d2e0a0ce668
+  ScriptInputsDefault:
+    showDebugVisuals: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      showDebugVisuals: false
+      debugVisualizer: !<MappingBased.AssignableType> 2d568a8c-9108-4be9-9609-8237d1035402
+      speechUI: !<MappingBased.AssignableType_1> 96eaa757-0521-4caa-a475-db676a34bbfb
+      gemini: !<MappingBased.AssignableType_2> d6b2113b-cc75-4bf6-7a1a-418f0369bb7c
+      responseUI: !<MappingBased.AssignableType_3> 1808d2ed-7648-42ac-9ee8-f012b8ad6c36
+      loading: !<MappingBased.AssignableType_4> b6cf86e7-1c35-436b-af97-9982dbf5a123
+      depthCache: !<MappingBased.AssignableType_5> f5a165cc-46fc-4949-86a4-8b1c68359157
+      speechText: !<reference.Text> 7a278549-467c-455a-8811-4b1f74809d18
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/71b2b8c9-94fb-4b17-4c52-6a157a27107b>
+  PrefabRemaps:
+    []
+  Name: SceneController
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1797f097-22e0-4e26-7ef4-074dc984d25e
+    - !<own> d6b2113b-cc75-4bf6-7a1a-418f0369bb7c
+- !<ScriptComponent/d6b2113b-cc75-4bf6-7a1a-418f0369bb7c>
+  PrefabRemaps:
+    []
+  Name: GeminiAPI
+  Enabled: true
+  ScriptAsset: !<reference> bd8d8d0d-7024-4ac8-acb0-b0634e618a84
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      internetModule: !<reference.InternetModule> 1e39211c-eab8-4b6b-8cbc-4fc9de6a01ac
+      remoteMediaModule: !<reference.RemoteMediaModule> 31d95c6f-863d-44e5-b21b-8274a893f12b
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/d9ff6c41-251a-404e-9e0d-e6d1d9f1e505>
+  Prototype: !<ObjectOwner/022619b3-4f0a-4f6e-83e8-44dbb47c71e9>
+    PackagePath: ""
+    objects:
+      - !<own> 71b2b8c9-94fb-4b17-4c52-6a157a27107b

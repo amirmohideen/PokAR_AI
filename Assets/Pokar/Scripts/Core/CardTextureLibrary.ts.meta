@@ -1,0 +1,51 @@
+- !<AssetImportMetadata/04622412-162d-420d-a6f6-3f02565d2775>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f5c38e8e-8e78-45a7-b44c-3cf24756dcd5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f5c38e8e-8e78-45a7-b44c-3cf24756dcd5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6a59967c-ca97-4e79-954c-2047be6cbd63
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6a59967c-ca97-4e79-954c-2047be6cbd63>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: be8fef10-941b-41de-a6b5-3746b9d93f6a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backTexture: false
+    cardTextures: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cardTextures: !<reference.Texture[]>
+        []
+      backTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">CardTextureLibrary — code → face texture</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#94A3B8;font-size:11px;\">Drag the Textures/Cards folder into Card Textures.</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Asset.Texture[] cardTextures = {} {"hint":"All 52 card-face textures (+ jokers). Drag the Cards folder here."}'
+    - '// @input Asset.Texture backTexture {"hint":"The shared card-back texture (card_back)."}'

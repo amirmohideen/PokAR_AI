@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/1969b733-e9e1-4226-b5da-af86f5a0c050>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> eaa8f363-969c-4d15-ae82-c9e8e4f1db7a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> eaa8f363-969c-4d15-ae82-c9e8e4f1db7a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 202e2d72-4ab6-4536-8ea7-7684a1e02a06
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/202e2d72-4ab6-4536-8ea7-7684a1e02a06>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c7ae9693-0fa6-42b7-a0b8-c966858234c5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    enableLogging: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - enableLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">PokerSessionManager — Connected Lenses roster</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input bool enableLogging = true {"hint":"Log roster changes to the console."}'

@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/39ca3793-28cf-48c9-9d06-81895924a4f8>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e548b6ad-2277-4360-a810-e1684abf1dde
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e548b6ad-2277-4360-a810-e1684abf1dde
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 05b8928b-f585-45fe-aca2-aa28ef0adb94
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/05b8928b-f585-45fe-aca2-aa28ef0adb94>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 0f121925-b5d7-4a9f-9aff-0eb3cdb20239
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    labelPrefab: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - labelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.ObjectPrefab labelPrefab

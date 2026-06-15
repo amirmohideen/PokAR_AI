@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/68f775fb-fbb5-49d3-8840-1eb591e9e340>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8001ae3c-1ffd-411d-8070-ee54bb632380
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8001ae3c-1ffd-411d-8070-ee54bb632380
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bc705ce6-09b4-4690-b84d-bd9b38bde95c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bc705ce6-09b4-4690-b84d-bd9b38bde95c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 19bfbbde-2ed4-4a0c-9546-7eca3ae4b355
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cardView: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cardView: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">SyncedCard — networked transform + flip</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType cardView {"hint":"CardView on this card (its flip is driven by the synced faceUp value)."}'

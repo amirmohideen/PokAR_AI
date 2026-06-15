@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/97724263-f7fa-462c-a63a-65d690959628>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 716b7326-0696-4c11-a7fc-ea5b88becab0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 716b7326-0696-4c11-a7fc-ea5b88becab0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c1faf0a8-5072-4c0f-a8ab-984d97d0f322
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c1faf0a8-5072-4c0f-a8ab-984d97d0f322>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 68f3352b-66ed-4ce0-b427-e873be1915bd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    betController: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - betController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">PotSync — networked pot total</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType betController {"hint":"Local BetController whose pot mirrors the synced value."}'

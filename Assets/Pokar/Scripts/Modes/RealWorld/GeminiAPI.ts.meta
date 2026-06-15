@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/58db82c3-9450-429d-a4e5-973352f72004>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 990f72ce-48a8-4fb1-bcf5-87410eb50e9f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 990f72ce-48a8-4fb1-bcf5-87410eb50e9f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5f2bcf16-26df-410f-859f-64b5b88715c4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5f2bcf16-26df-410f-859f-64b5b88715c4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: ece7e2cd-9ac9-4455-9d22-29178b8dfa50
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    internetModule: false
+    remoteMediaModule: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - internetModule: !<reference.InternetModule> 00000000-0000-0000-0000-000000000000
+      remoteMediaModule: !<reference.RemoteMediaModule> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.InternetModule internetModule {"hint":"Internet module for making HTTP requests to Replicate API"}'
+    - '// @input Asset.RemoteMediaModule remoteMediaModule {"hint":"Remote media module for loading audio resources"}'

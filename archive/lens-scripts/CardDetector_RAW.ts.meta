@@ -1,0 +1,85 @@
+- !<AssetImportMetadata/77791979-997a-49fd-a733-9462736abbba>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 621ce4bf-d05d-48f8-8c72-f93c68725ca1
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 621ce4bf-d05d-48f8-8c72-f93c68725ca1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bd869b31-ffc9-4a0a-9523-68bea2a80fcb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bd869b31-ffc9-4a0a-9523-68bea2a80fcb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: afce7b50-dfb0-4d70-9167-7af2f2500b34
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    apiKey: false
+    confidenceThreshold: false
+    detectionPrefab: false
+    logCompact: false
+    logOnlyDetections: false
+    logRawJson: false
+    maxDetections: false
+    modelPath: false
+    resolution: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - apiKey: ElXFfdS0MxKgYLAu2sqF
+      modelPath: playing-cards-4fnhs/1
+      confidenceThreshold: !<float> 40.000000
+      resolution: !<float> 640.000000
+      detectionPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      maxDetections: !<float> 10.000000
+      logRawJson: true
+      logCompact: false
+      logOnlyDetections: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">CardDetector_RAW – Cross-camera depth projection</span><br/><span style=\"color: #94A3B8; font-size: 11px;\">Remaps colour-camera UV → depth-camera UV before sampling, matching Snap Depth Cache sample.</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Roboflow</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Roboflow"}'
+    - '// @input string apiKey = "ElXFfdS0MxKgYLAu2sqF" {"hint":"Your Roboflow API key"}'
+    - '// @input string modelPath = "playing-cards-muou8/10" {"hint":"Model path: {project}/{version}"}'
+    - '// @input float confidenceThreshold = 40 {"hint":"Minimum confidence to include a detection (0–100)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Camera</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Camera"}'
+    - '// @input float resolution = 640 {"hint":"Camera stream resolution in pixels (max 756 on Spectacles 2024)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">3D Placement</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Placement"}'
+    - '// @input Asset.ObjectPrefab detectionPrefab {"hint":"Prefab with a Text component — instantiated at each detected card position"}'
+    - '// @input float maxDetections = 10 {"hint":"Object pool size — maximum simultaneous detections displayed"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Debug</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool logRawJson = true {"hint":"Print full raw JSON from every inference call"}'
+    - '// @input bool logCompact {"hint":"Only show class label and confidence per detection (overrides logRawJson)"}'
+    - '// @input bool logOnlyDetections {"hint":"Only log when detections are found (reduces noise)"}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/93c6533a-2aae-4737-9d28-19ea1977cd99>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> eb0f7696-c2f7-425c-b977-b2e89cb3d3aa
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> eb0f7696-c2f7-425c-b977-b2e89cb3d3aa
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9e0b4f47-79d1-4ee3-addc-9262aeb4e9cb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9e0b4f47-79d1-4ee3-addc-9262aeb4e9cb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: fcf104d8-774d-4e87-b1e6-46d971ecf700
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    betController: false
+    gameContentRoot: false
+    multiplayerRoot: false
+    realWorldRoot: false
+    singlePlayerRoot: false
+    startMode: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - startMode: single
+      singlePlayerRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      multiplayerRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      realWorldRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      gameContentRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      betController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">GameManager — mode switch & shared state</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input string startMode = "none" {"hint":"Mode to start in. Can be changed at runtime via setMode().", "widget":"combobox", "values":[{"label":"None", "value":"none"}, {"label":"Single Player", "value":"single"}, {"label":"Multiplayer", "value":"multi"}, {"label":"Real World", "value":"realworld"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject singlePlayerRoot {"hint":"Root object for Single-Player mode (enabled only in that mode)."}'
+    - '// @input SceneObject multiplayerRoot {"hint":"Root object for Multiplayer mode."}'
+    - '// @input SceneObject realWorldRoot {"hint":"Root object for Real-World (Gemini) mode."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject gameContentRoot {"hint":"Shared game content (virtual table: cards, chips, action buttons). Hidden until a mode is chosen."}'
+    - '// @input AssignableType betController {"hint":"Shared BetController (pot / stack)."}'

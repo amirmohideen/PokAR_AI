@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/bbd18a2d-e662-4370-8e1a-2497938b8328>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e546713c-e3a6-4c07-8394-4376ab6b1924
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e546713c-e3a6-4c07-8394-4376ab6b1924
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 44ba1fa3-e2b9-4314-b2fe-c97eec9cf898
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/44ba1fa3-e2b9-4314-b2fe-c97eec9cf898>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3dbf4fa3-b207-42e9-bc47-74c3cb5dbe97
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    categoryText: false
+    faceCamera: false
+    panelRoot: false
+    percentText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      percentText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      categoryText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      faceCamera: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">HandStrengthHUD — floating win% display</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject panelRoot {"hint":"Root object scaled in/out when shown/hidden."}'
+    - '// @input Component.Text percentText {"hint":"Large Text for the win percentage, e.g. \"72%\"."}'
+    - '// @input Component.Text categoryText {"hint":"Text for the best-hand category, e.g. \"Two Pair\"."}'
+    - '// @input bool faceCamera = true {"hint":"Billboard the HUD toward the camera each frame."}'

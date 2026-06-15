@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/b3506d5b-28a0-4aac-bb81-1460954a7582>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a361efd0-42a2-4bc8-abd1-6d46f3dccc8c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a361efd0-42a2-4bc8-abd1-6d46f3dccc8c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ad862caa-e59a-4abb-98e2-7fc08fc2a209
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ad862caa-e59a-4abb-98e2-7fc08fc2a209>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 422848b0-7d93-4c72-9634-29a13fc0eef8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    mainCamObj: false
+    micRend: false
+    speecBocAnchor: false
+    speechButtonCollider: false
+    speechText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - mainCamObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      speecBocAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micRend: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      speechText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      speechButtonCollider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject mainCamObj
+    - // @input SceneObject speecBocAnchor
+    - // @input Component.RenderMeshVisual micRend
+    - // @input Component.Text speechText
+    - // @input Component.ColliderComponent speechButtonCollider

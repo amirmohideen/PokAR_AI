@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokar – Sessions</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f172a; --surface: #1e293b; --surface2: #273449; --border: #334155;
+      --text: #e2e8f0; --muted: #64748b; --blue: #60a5fa; --green: #34d399;
+      --amber: #fbbf24; --red: #f87171; --purple: #a78bfa;
+    }
+    body { font-family: system-ui,-apple-system,sans-serif; background: var(--bg); color: var(--text);
+           padding: 24px; min-height: 100vh; }
+    h1 { font-size: 1.4rem; color: var(--blue); margin-bottom: 4px; }
+    .subtitle { font-size: .8rem; color: var(--muted); margin-bottom: 20px; }
+
+    /* ── Badge ──────────────────────────────────────────────────────── */
+    .badge { display:inline-flex; align-items:center; gap:5px; font-size:.7rem;
+             font-weight:600; padding:2px 8px; border-radius:20px; }
+    .badge-active { background:rgba(52,211,153,.15); color:var(--green); }
+    .badge-active::before { content:''; width:6px; height:6px; border-radius:50%;
+                             background:var(--green); animation:pulse 1.2s infinite; }
+    .badge-done { background:rgba(100,116,139,.15); color:var(--muted); }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+    /* ── Session card ───────────────────────────────────────────────── */
+    .session { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+               margin-bottom:28px; overflow:hidden; }
+    .session-header { padding:14px 18px; display:flex; align-items:center; gap:12px;
+                      border-bottom:1px solid var(--border); flex-wrap:wrap; }
+    .session-id { font-size:.8rem; color:var(--blue); font-family:monospace; }
+    .session-time { font-size:.75rem; color:var(--muted); margin-left:auto; }
+    .session-body { padding:16px 18px; }
+
+    /* ── Metric toggle ──────────────────────────────────────────────── */
+    .metric-bar { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px; }
+    .metric-btn { padding:5px 12px; border-radius:6px; font-size:.75rem; font-weight:600;
+                  cursor:pointer; border:1px solid var(--border); background:transparent;
+                  color:var(--muted); transition:all .15s; }
+    .metric-btn:hover { border-color:var(--blue); color:var(--blue); }
+    .metric-btn.active { background:rgba(96,165,250,.15); border-color:var(--blue); color:var(--blue); }
+    .metric-label { font-size:.7rem; color:var(--muted); align-self:center; margin-left:4px; }
+
+    /* ── Matrix table ───────────────────────────────────────────────── */
+    .matrix-wrap { overflow-x:auto; margin-bottom:16px; }
+    .matrix { border-collapse:collapse; font-size:.78rem; min-width:420px; width:100%; }
+    .matrix th { padding:7px 10px; color:var(--muted); font-weight:500; text-align:center;
+                 border-bottom:1px solid var(--border); white-space:nowrap; }
+    .matrix th.row-head { text-align:left; color:var(--text); }
+    .matrix td { padding:0; border:1px solid rgba(51,65,85,.6); text-align:center; position:relative; }
+    .cell-inner { padding:8px 6px; display:flex; flex-direction:column; align-items:center;
+                  gap:2px; position:relative; }
+    .cell-val { font-family:monospace; font-size:.8rem; font-weight:600; }
+    .cell-sub { font-size:.65rem; color:var(--muted); }
+    td.cell-empty .cell-val { color:var(--muted); font-weight:400; font-style:italic; }
+    td.cell-pending .cell-val { color:var(--amber); }
+
+    /* Active round: pulsing border */
+    td.cell-active { outline:2px solid var(--green); outline-offset:-2px; }
+    td.cell-active::after { content:'●'; position:absolute; top:3px; right:5px;
+                             font-size:.55rem; color:var(--green); animation:pulse 1.2s infinite; }
+
+    /* Row header */
+    .matrix td.row-head { padding:8px 12px; font-weight:600; color:var(--text);
+                           text-align:left; white-space:nowrap; background:var(--surface2); }
+
+    /* ── Thumbnails ─────────────────────────────────────────────────── */
+    .thumb-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(80px,1fr));
+                  gap:6px; margin-bottom:14px; }
+    .thumb-item { display:flex; flex-direction:column; gap:3px; }
+    .thumb-item img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:5px;
+                      border:1px solid var(--border); cursor:pointer; }
+    .thumb-item img:hover { opacity:.8; }
+    .thumb-key { font-size:.6rem; color:var(--muted); text-align:center;
+                 white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+    /* ── Actions ────────────────────────────────────────────────────── */
+    .actions { display:flex; gap:8px; }
+    .btn { display:inline-flex; align-items:center; gap:6px; padding:6px 14px;
+           border-radius:7px; font-size:.8rem; font-weight:500; cursor:pointer;
+           text-decoration:none; border:none; }
+    .btn:hover { opacity:.8; }
+    .btn-dl { background:rgba(96,165,250,.15); color:var(--blue); }
+    .btn-off { background:rgba(100,116,139,.1); color:var(--muted); pointer-events:none; }
+
+    /* ── Legacy quality table ───────────────────────────────────────── */
+    .q-table { width:100%; border-collapse:collapse; font-size:.78rem; margin-bottom:14px; }
+    .q-table th { text-align:left; color:var(--muted); font-weight:500;
+                  padding:6px 10px; border-bottom:1px solid var(--border); }
+    .q-table td { padding:6px 10px; border-bottom:1px solid rgba(51,65,85,.4);
+                  font-family:monospace; }
+    .q-table tr:last-child td { border-bottom:none; }
+
+    /* ── Lightbox ───────────────────────────────────────────────────── */
+    #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,.88);
+          z-index:100; justify-content:center; align-items:center; }
+    #lb.open { display:flex; }
+    #lb img { max-width:90vw; max-height:90vh; border-radius:8px; }
+    #lb-close { position:fixed; top:16px; right:20px; font-size:1.4rem;
+                color:#fff; cursor:pointer; opacity:.7; }
+    #lb-close:hover { opacity:1; }
+
+    .empty { text-align:center; color:var(--muted); padding:60px 0; }
+  </style>
+</head>
+<body>
+
+<h1>Pokar – Capture Sessions</h1>
+<p class="subtitle">Resolution × Compression matrix benchmark · 15 s per cell · server-paced · auto-refresh every 3 s</p>
+
+<div id="sessions"></div>
+
+<div id="lb">
+  <span id="lb-close" onclick="closeLb()">✕</span>
+  <img id="lb-img" src="" alt=""/>
+</div>
+
+<script>
+const RESOLUTIONS  = [256, 512, 640, 756]
+const COMP_KEYS    = ['maxComp', 'low', 'medium', 'high', 'maxQual']
+const COMP_LABELS  = {maxComp:'Max Compress', low:'Low', medium:'Medium', high:'High', maxQual:'Max Quality'}
+
+// Per-session selected metric; default 'fps'
+const sessionMetric = {}
+
+const METRICS = [
+  {key:'fps',        label:'FPS',        field:'fps',        unit:'',    color:'green',  higher:true},
+  {key:'frames',     label:'Frames',     field:'totalFrames',unit:'',    color:'green',  higher:true},
+  {key:'avgSize',    label:'Avg Size',   field:'avgSizeKb',  unit:' KB', color:'amber',  higher:false},
+  {key:'totalData',  label:'Total Data', field:'totalDataMb',unit:' MB', color:'amber',  higher:false},
+]
+
+function fmtDate(ts) {
+  const d = new Date(ts)
+  return d.toLocaleDateString() + ' ' + d.toLocaleTimeString()
+}
+function fmtDur(ms) {
+  if (!ms) return ''
+  const s = Math.round(ms / 1000)
+  return s >= 60 ? Math.floor(s/60) + 'm ' + (s%60) + 's' : s + 's'
+}
+
+// ── Heatmap coloring ──────────────────────────────────────────────────────────
+function heatColor(norm, metricDef) {
+  const t = metricDef.higher ? norm : (1 - norm)
+  if (metricDef.color === 'green') {
+    return `rgba(52,211,153,${(0.08 + t * 0.55).toFixed(2)})`
+  } else {
+    return `rgba(251,191,36,${(0.08 + t * 0.55).toFixed(2)})`
+  }
+}
+
+function applyHeatmap(sessionId, metricKey) {
+  const mDef = METRICS.find(m => m.key === metricKey) || METRICS[0]
+  const cells = document.querySelectorAll('[data-sid="' + sessionId + '"] .matrix-cell')
+  const vals  = []
+  cells.forEach(td => {
+    const v = parseFloat(td.dataset.val)
+    if (!isNaN(v)) vals.push(v)
+  })
+  const min = Math.min(...vals), max = Math.max(...vals)
+  const range = max - min || 1
+  cells.forEach(td => {
+    const v = parseFloat(td.dataset.val)
+    if (isNaN(v)) { td.style.background = ''; return }
+    td.style.background = heatColor((v - min) / range, mDef)
+  })
+}
+
+// ── Matrix render ─────────────────────────────────────────────────────────────
+function renderMatrix(session) {
+  const {matrix, currentRound} = session
+  if (!matrix) return '<p style="color:var(--muted);font-size:.8rem">No matrix data.</p>'
+
+  const sid    = session.id
+  const metric = sessionMetric[sid] || 'fps'
+  const mDef   = METRICS.find(m => m.key === metric) || METRICS[0]
+
+  // Toggle buttons
+  const btns = METRICS.map(m =>
+    `<button class="metric-btn${m.key===metric?' active':''}"
+      onclick="setMetric('${sid}','${m.key}')">${m.label}</button>`
+  ).join('')
+
+  // Matrix table
+  let thead = '<tr><th class="row-head">res \\ quality</th>'
+  COMP_KEYS.forEach(ck => { thead += '<th>' + COMP_LABELS[ck] + '</th>' })
+  thead += '</tr>'
+
+  let tbody = ''
+  for (const res of RESOLUTIONS) {
+    tbody += '<tr><td class="row-head">' + res + ' px</td>'
+    for (const ck of COMP_KEYS) {
+      const key  = res + '_' + ck
+      const cell = matrix.cells[key]
+      const isActive = currentRound === key
+
+      if (!cell) {
+        tbody += `<td class="matrix-cell cell-empty" data-key="${key}" data-sid="${sid}" data-val="">
+          <div class="cell-inner"><span class="cell-val">—</span></div></td>`
+      } else if (!cell.totalFrames) {
+        tbody += `<td class="matrix-cell cell-pending${isActive?' cell-active':''}" data-key="${key}" data-sid="${sid}" data-val="">
+          <div class="cell-inner"><span class="cell-val">…</span></div></td>`
+      } else {
+        const val = cell[mDef.field]
+        const sub = mDef.key==='fps'
+          ? cell.totalFrames + ' fr'
+          : mDef.key==='frames'
+            ? cell.durationS + 's'
+            : cell.fps + ' fps'
+        tbody += `<td class="matrix-cell${isActive?' cell-active':''}" data-key="${key}" data-sid="${sid}" data-val="${val}">
+          <div class="cell-inner">
+            <span class="cell-val">${val}${mDef.unit}</span>
+            <span class="cell-sub">${sub}</span>
+          </div></td>`
+      }
+    }
+    tbody += '</tr>'
+  }
+
+  // Thumbnails: last captured frame per completed round
+  let thumbsHtml = ''
+  const lf = session.lastFrames || {}
+  const thumbCells = Object.entries(lf)
+  if (thumbCells.length) {
+    thumbsHtml = '<div class="thumb-grid">' +
+      thumbCells.map(([key, url]) =>
+        `<div class="thumb-item">
+          <img src="${url}" loading="lazy" onclick="openLb('${url}')" title="${key}"/>
+          <div class="thumb-key">${key}</div>
+        </div>`
+      ).join('') +
+      '</div>'
+  }
+
+  return `
+    <div class="metric-bar">${btns}<span class="metric-label">coloring by metric</span></div>
+    <div class="matrix-wrap">
+      <table class="matrix" data-sid="${sid}">
+        <thead>${thead}</thead>
+        <tbody>${tbody}</tbody>
+      </table>
+    </div>
+    ${thumbsHtml}`
+}
+
+// ── Legacy quality-based session render ───────────────────────────────────────
+function renderQualitySession(session) {
+  const qs = session.qualityStats || {}
+  const rows = ['low','medium','high','full'].map(q => {
+    const s = qs[q]
+    if (!s) return `<tr><td>${q}</td><td colspan="5" style="color:var(--muted);font-style:italic">—</td></tr>`
+    return `<tr><td>${q}</td><td>${s.totalFrames}</td><td>${s.fps}</td>
+      <td>${s.framesPerMinute}</td><td>${s.avgSizeKb} KB</td><td>${s.totalDataMb} MB</td></tr>`
+  }).join('')
+  return `<table class="q-table">
+    <thead><tr><th>Quality</th><th>Frames</th><th>FPS</th><th>Fr/min</th><th>Avg size</th><th>Total</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`
+}
+
+// ── Session card ──────────────────────────────────────────────────────────────
+function renderSession(session) {
+  const dur = session.endedAt
+    ? fmtDur(session.endedAt - session.startedAt)
+    : session.active ? fmtDur(Date.now() - session.startedAt) : ''
+
+  const badge = session.active
+    ? '<span class="badge badge-active">ACTIVE</span>'
+    : '<span class="badge badge-done">done</span>'
+
+  const body = session.sessionType === 'matrix'
+    ? renderMatrix(session)
+    : renderQualitySession(session)
+
+  const hasPhotos = session.sessionType === 'matrix'
+    ? session.matrix && Object.values(session.matrix.cells).some(c => c?.totalFrames > 0)
+    : Object.values(session.qualityStats || {}).some(s => s?.totalFrames > 0)
+
+  return `<div class="session" data-sid="${session.id}">
+    <div class="session-header">
+      ${badge}
+      <span class="session-id">${session.id}</span>
+      ${session.active && session.currentRound ? `<span style="font-size:.75rem;color:var(--green)">▸ ${session.currentRound}</span>` : ''}
+      <span class="session-time">${fmtDate(session.startedAt)}${dur ? ' · ' + dur : ''}</span>
+    </div>
+    <div class="session-body">
+      ${body}
+      <div class="actions">
+        <a class="btn ${hasPhotos?'btn-dl':'btn-off'}"
+           href="/api/session/${session.id}/download" download>↓ Download ZIP</a>
+      </div>
+    </div>
+  </div>`
+}
+
+// ── Metric toggle ─────────────────────────────────────────────────────────────
+function setMetric(sid, metric) {
+  sessionMetric[sid] = metric
+  // Re-render just this session card
+  const el = document.querySelector('[data-sid="' + sid + '"].session')
+  if (!el) return
+  const session = window._lastSessions?.find(s => s.id === sid)
+  if (!session) return
+  el.outerHTML = renderSession(session)
+  applyHeatmap(sid, metric)
+}
+
+// ── Poll ──────────────────────────────────────────────────────────────────────
+async function refresh() {
+  try {
+    // Request full sessions including frame data for thumbnails
+    const sessions = await (await fetch('/api/sessions?frames=1')).json()
+    window._lastSessions = sessions
+    const el = document.getElementById('sessions')
+    if (!sessions.length) {
+      el.innerHTML = '<div class="empty">No sessions yet.<br/>Start the CaptureSession lens on Spectacles.</div>'
+      return
+    }
+    el.innerHTML = sessions.map(renderSession).join('')
+    // Apply heatmaps
+    sessions.forEach(s => {
+      if (s.sessionType === 'matrix') applyHeatmap(s.id, sessionMetric[s.id] || 'fps')
+    })
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+function openLb(src) { document.getElementById('lb-img').src=src; document.getElementById('lb').classList.add('open') }
+function closeLb() { document.getElementById('lb').classList.remove('open') }
+document.getElementById('lb').addEventListener('click', e => { if(e.target===e.currentTarget) closeLb() })
+
+refresh()
+setInterval(refresh, 3000)
+</script>
+</body>
+</html>

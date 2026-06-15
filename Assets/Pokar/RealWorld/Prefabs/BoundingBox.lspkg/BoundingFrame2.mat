@@ -1,0 +1,55 @@
+- !<Material/bbe8af12-d8f6-435f-a282-1d770be4d56d>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> 1b3de8b0-e9af-464b-b0bf-f472f8346628
+- !<PassInfo/1b3de8b0-e9af-464b-b0bf-f472f8346628>
+  CachedProperties:
+    - Port_Input2_N005:
+        typeIdx: 1
+        value: 2.000000
+    - Port_borderWidth_N001:
+        typeIdx: 1
+        value: 1.000000
+    - Port_cellSize_N001:
+        typeIdx: 1
+        value: 0.600000
+    - Port_cornerSize_N001:
+        typeIdx: 1
+        value: 4.000000
+    - PreviewEnabled:
+        typeIdx: 0
+        value: 0
+    - Tweak_N2:
+        typeIdx: 9
+        value:
+          id: 875ed5ff-f3ac-4615-8725-206c6496b753
+          sampler:
+            filteringMode: Trilinear
+            wrapModeU: Repeat
+            wrapModeV: Repeat
+            wrapModeW: Repeat
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+            mipmaps: false
+          type: Texture2D
+    - alphaTestThreshold:
+        typeIdx: 1
+        value: 0.500000
+    - baseColor:
+        typeIdx: 5
+        value: {x: 0.732601, y: 0.000000, z: 0.012207, w: 1.000000}
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: true
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: AlphaTest
+  Properties:
+    {}
+  Pass: !<reference> a1e09798-31f8-4a22-8c72-508a18f87b17

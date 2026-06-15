@@ -1,0 +1,67 @@
+- !<AssetImportMetadata/4ba423dd-524a-4859-b5a2-2c2ee0d5178e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 73e036b4-2df4-4daa-8499-a9e3cb110bed
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 73e036b4-2df4-4daa-8499-a9e3cb110bed
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6a02cfdd-2265-44cb-85a0-ddeb21f96a6c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6a02cfdd-2265-44cb-85a0-ddeb21f96a6c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 890ee331-521d-4581-b59f-d41f65e4f2ec
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    betAnchor: false
+    cpuBetAnchor: false
+    cpuSlots: false
+    deckAnchor: false
+    fieldSlots: false
+    handSlots: false
+    potAnchor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - handSlots: !<reference.SceneObject[]>
+        []
+      fieldSlots: !<reference.SceneObject[]>
+        []
+      cpuSlots: !<reference.SceneObject[]>
+        []
+      potAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      deckAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      betAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cpuBetAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">TableLayout — slot anchors for cards, field & pot</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - "// @input SceneObject[] handSlots = {} {\"hint\":\"Anchor objects for the local player's hole cards (usually 2).\"}"
+    - '// @input SceneObject[] fieldSlots = {} {"hint":"Anchor objects for the community / field cards (usually 5)."}'
+    - "// @input SceneObject[] cpuSlots = {} {\"hint\":\"Anchor objects for the CPU opponent's hole cards (usually 2).\"}"
+    - '// @input SceneObject potAnchor {"hint":"Anchor object marking the centre pot / chip area."}'
+    - '// @input SceneObject deckAnchor {"hint":"Anchor where the draw deck sits."}'
+    - '// @input SceneObject betAnchor {"hint":"Anchor where the draggable bet chip rests."}'
+    - "// @input SceneObject cpuBetAnchor {\"hint\":\"Anchor where the CPU's bet chips stack before flying to the pot.\"}"

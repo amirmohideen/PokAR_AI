@@ -1,0 +1,98 @@
+- !<AssetImportMetadata/6a274eea-f775-4143-b22e-f96eda160b89>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dddc60f3-db2d-444f-a1f0-2091bff36706
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dddc60f3-db2d-444f-a1f0-2091bff36706
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 482008f1-6be7-4c80-8e95-082832026f54
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/482008f1-6be7-4c80-8e95-082832026f54>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c78147c7-637b-430d-b011-3382a5946262
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    audioComponent: false
+    collisionAudioComponent: false
+    collisionVolume: false
+    dynamicAudioOutput: false
+    followSpeed: false
+    grabDistance: false
+    interactable: false
+    maxVolume: false
+    maxVolumeSpeed: false
+    minPinchStrength: false
+    minSoundDuration: false
+    minVolume: false
+    soundCooldown: false
+    soundFadeIn: false
+    soundFadeOut: false
+    soundStopSpeed: false
+    soundTriggerSpeed: false
+    useInteractableDebug: false
+    velocitySmoothing: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - grabDistance: !<float> 15.000000
+      followSpeed: !<float> 12.000000
+      minPinchStrength: 0.700000
+      soundTriggerSpeed: !<float> 5.000000
+      soundStopSpeed: !<float> 2.000000
+      minSoundDuration: 0.800000
+      soundCooldown: 0.500000
+      velocitySmoothing: 0.150000
+      soundFadeIn: 0.250000
+      soundFadeOut: 0.400000
+      minVolume: 0.500000
+      maxVolume: !<float> 1.000000
+      maxVolumeSpeed: !<float> 20.000000
+      collisionAudioComponent: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      collisionVolume: 0.600000
+      audioComponent: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      dynamicAudioOutput: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      interactable: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      useInteractableDebug: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input float grabDistance = 15 {"hint":"Distance threshold in cm for grabbing the box"}'
+    - '// @input float followSpeed = 12 {"hint":"Smoothing speed for box movement (higher = faster)"}'
+    - '// @input float minPinchStrength = 0.7 {"hint":"Minimum pinch strength to grab (0-1, higher = more intentional)"}'
+    - '// @input float soundTriggerSpeed = 5 {"hint":"Speed threshold (cm/s) to START playing sound"}'
+    - '// @input float soundStopSpeed = 2 {"hint":"Speed threshold (cm/s) to STOP playing sound (lower than trigger for hysteresis)"}'
+    - '// @input float minSoundDuration = 0.8 {"hint":"Minimum time (seconds) sound plays before it can stop"}'
+    - '// @input float soundCooldown = 0.5 {"hint":"Cooldown in seconds between NEW sound triggers"}'
+    - '// @input float velocitySmoothing = 0.15 {"hint":"Velocity smoothing factor (0-1). Higher = more responsive, Lower = smoother"}'
+    - '// @input float soundFadeIn = 0.25 {"hint":"Fade in duration for sound (seconds)"}'
+    - '// @input float soundFadeOut = 0.4 {"hint":"Fade out duration for sound (seconds)"}'
+    - '// @input float minVolume = 0.5 {"hint":"Minimum volume at slow speed (0-1)"}'
+    - '// @input float maxVolume = 1 {"hint":"Maximum volume at fast speed (0-1)"}'
+    - '// @input float maxVolumeSpeed = 20 {"hint":"Speed (cm/s) at which volume reaches maximum"}'
+    - '// @input Component.AudioComponent collisionAudioComponent {"hint":"Separate Audio Component for collision sounds (to avoid interrupting velocity sounds)"}'
+    - '// @input float collisionVolume = 0.6 {"hint":"Volume for collision sound (0-1)"}'
+    - '// @input Component.AudioComponent audioComponent {"hint":"Audio Component for playing sound"}'
+    - '// @input AssignableType dynamicAudioOutput {"hint":"Dynamic Audio Output for handling audio stream"}'
+    - '// @input AssignableType_1 interactable {"hint":"Optional Interactable component - if present, will use its events for grab detection"}'
+    - '// @input bool useInteractableDebug {"hint":"Enable Interactable system for debugging (uses SIK manipulation instead of custom hand tracking)"}'

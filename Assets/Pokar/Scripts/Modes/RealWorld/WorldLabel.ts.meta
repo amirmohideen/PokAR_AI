@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/b0cd4abe-4280-41c6-87ce-268cbcdba41f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 15e8896d-aa3a-4940-9555-0c6a0501ee61
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 15e8896d-aa3a-4940-9555-0c6a0501ee61
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b962c7c0-1265-43cf-966e-4eae1003ae20
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b962c7c0-1265-43cf-966e-4eae1003ae20>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 91a98236-0b99-42ec-9472-5a980a904bd8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    frameRend: false
+    textComp: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - frameRend: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      textComp: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.RenderMeshVisual frameRend
+    - // @input Component.Text textComp

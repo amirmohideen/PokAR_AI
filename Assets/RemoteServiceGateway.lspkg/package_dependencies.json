@@ -1,0 +1,20 @@
+{
+    "dependencies": [
+        {
+            "assetId": "",
+            "exportId": "707281e6-3afd-4ef3-9610-8d38a4e818f0",
+            "id": "90670ad1-4e47-4473-b58f-8a3a62165099",
+            "name": "Utilities",
+            "version": "2.0.0",
+            "versionOverride": ""
+        },
+        {
+            "assetId": "",
+            "exportId": "de259394-32c0-4e4a-8624-e96ac4097f97",
+            "id": "dc4c33c9-7391-46fc-8b73-8687edf8fbfd",
+            "name": "SnapDecorators",
+            "version": "2.0.0",
+            "versionOverride": ""
+        }
+    ]
+}

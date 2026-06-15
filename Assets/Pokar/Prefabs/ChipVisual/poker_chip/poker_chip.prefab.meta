@@ -1,0 +1,131 @@
+- !<AssetImportMetadata/c2a05e35-e93f-4e2d-a153-ba3f7703ba06>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> a33e0759-4dc4-4294-a477-291a86ea97fb
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> a33e0759-4dc4-4294-a477-291a86ea97fb
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> a117ca97-5ffc-4da6-bc12-613921bdec4f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/1113f9e4-aa0d-4189-65df-b4cad22c3618>
+  PrefabRemaps:
+    []
+  Name: Object_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 08ca8e94-a7be-4700-bf81-26075947c2cc
+  Mesh: !<reference> a106f408-5c12-45c9-988f-011919abd2a3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/420d9a52-7de5-4f49-49fa-6e02e9a6e196>
+  PrefabRemaps:
+    []
+  Name: pokerchip.obj.cleaner.materialmerger.gles
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7584e9e3-d516-4238-4496-19791e312de4
+  Components:
+    []
+- !<SceneObject/7584e9e3-d516-4238-4496-19791e312de4>
+  PrefabRemaps:
+    []
+  Name: Object_2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1113f9e4-aa0d-4189-65df-b4cad22c3618
+- !<SceneObject/9f6a55b2-ea6b-42a1-6044-f82ff8de0ec3>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.229120, y: 1.229120, z: 1.229120}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 420d9a52-7de5-4f49-49fa-6e02e9a6e196
+  Components:
+    []
+- !<SceneObject/a02508dc-372e-44db-49d4-858eb757ea74>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> ae9ed955-d564-47d7-7ca1-cae0988a731e
+  Components:
+    []
+- !<ObjectPrefabAssetData/a117ca97-5ffc-4da6-bc12-613921bdec4f>
+  Prototype: !<ObjectOwner/923d586a-55ac-4101-80e9-e8c6ba858b52>
+    PackagePath: ""
+    objects:
+      - !<own> aae5db0e-0e79-41cd-7eb5-491af72aa284
+- !<SceneObject/aae5db0e-0e79-41cd-7eb5-491af72aa284>
+  PrefabRemaps:
+    []
+  Name: poker_chip
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> a02508dc-372e-44db-49d4-858eb757ea74
+  Components:
+    []
+- !<SceneObject/ae9ed955-d564-47d7-7ca1-cae0988a731e>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9f6a55b2-ea6b-42a1-6044-f82ff8de0ec3
+  Components:
+    []

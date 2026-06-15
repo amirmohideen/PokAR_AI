@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/bf178e98-92db-428f-b944-2ee5f9752b63>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 3c23bb7c-478d-49df-b68d-51875c6442bf
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 3c23bb7c-478d-49df-b68d-51875c6442bf
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 884e3226-11ff-44c2-b669-e81a0098e7ab
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/43dd691b-b99e-4b2e-6222-6a6a94b47aaf>
+  PrefabRemaps:
+    []
+  Name: GeminiAPI
+  Enabled: true
+  ScriptAsset: !<reference> bd8d8d0d-7024-4ac8-acb0-b0634e618a84
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      internetModule: !<reference.InternetModule> 1e39211c-eab8-4b6b-8cbc-4fc9de6a01ac
+      remoteMediaModule: !<reference.RemoteMediaModule> 31d95c6f-863d-44e5-b21b-8274a893f12b
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/859158ef-e3f9-41f3-6fd7-9848fd3db548>
+  PrefabRemaps:
+    []
+  Name: SceneController
+  Enabled: true
+  ScriptAsset: !<reference> a9716e2e-4317-4275-84c5-7d2e0a0ce668
+  ScriptInputsDefault:
+    showDebugVisuals: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      showDebugVisuals: false
+      debugVisualizer: !<MappingBased.AssignableType> 2d568a8c-9108-4be9-9609-8237d1035402
+      speechUI: !<MappingBased.AssignableType_1> 96eaa757-0521-4caa-a475-db676a34bbfb
+      gemini: !<MappingBased.AssignableType_2> 43dd691b-b99e-4b2e-6222-6a6a94b47aaf
+      responseUI: !<MappingBased.AssignableType_3> 1808d2ed-7648-42ac-9ee8-f012b8ad6c36
+      loading: !<MappingBased.AssignableType_4> b6cf86e7-1c35-436b-af97-9982dbf5a123
+      depthCache: !<MappingBased.AssignableType_5> f5a165cc-46fc-4949-86a4-8b1c68359157
+      speechText: !<reference.Text> 7a278549-467c-455a-8811-4b1f74809d18
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/884e3226-11ff-44c2-b669-e81a0098e7ab>
+  Prototype: !<ObjectOwner/15c31d6d-9033-48bb-bd98-2eece2ec18bd>
+    PackagePath: ""
+    objects:
+      - !<own> 8ca7b3fb-140f-42de-4833-5647fe6bce5a
+- !<SceneObject/8ca7b3fb-140f-42de-4833-5647fe6bce5a>
+  PrefabRemaps:
+    []
+  Name: SceneController
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 859158ef-e3f9-41f3-6fd7-9848fd3db548
+    - !<own> 43dd691b-b99e-4b2e-6222-6a6a94b47aaf

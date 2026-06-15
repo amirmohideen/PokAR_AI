@@ -1,0 +1,69 @@
+- !<AssetImportMetadata/a577af7f-d319-494e-a0ad-6ad31c34cccd>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7a6fb149-767d-4360-ab5c-62508e7f4374
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7a6fb149-767d-4360-ab5c-62508e7f4374
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3915176b-5b73-4d27-83d8-806d793c4e01
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3915176b-5b73-4d27-83d8-806d793c4e01>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: ef5036c8-7210-4ed4-b9db-225a52e6ad24
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    card1: false
+    card2: false
+    card3: false
+    dealOnEachShow: false
+    dealSound: false
+    flyDuration: false
+    stackAnchor: false
+    stagger: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - stackAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      card1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      card2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      card3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      flyDuration: 0.450000
+      stagger: 0.350000
+      dealOnEachShow: true
+      dealSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">MenuCardDealer — deal mode cards from the stack</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject stackAnchor {"hint":"The deck stack object the cards are dealt from (their start position)."}'
+    - '// @ui {"widget":"separator"}'
+    - // @input SceneObject card1
+    - // @input SceneObject card2
+    - // @input SceneObject card3
+    - '// @ui {"widget":"separator"}'
+    - '// @input float flyDuration = 0.45 {"hint":"Seconds each card takes to fly to its position."}'
+    - '// @input float stagger = 0.35 {"hint":"Delay between consecutive card deals (seconds)."}'
+    - '// @input bool dealOnEachShow = true {"hint":"Re-deal every time the menu is shown (vs. only the first time)."}'
+    - '// @input Component.AudioComponent dealSound {"hint":"AudioComponent played each time a card is dealt."}'

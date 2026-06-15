@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/8b2ffd64-d115-43cc-a8e2-3e66f44a6ba5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> de16b9a3-bf35-4794-a502-ffc742c24a3c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> de16b9a3-bf35-4794-a502-ffc742c24a3c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2140278d-4ba2-4faf-9a24-1eb071d131d0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2140278d-4ba2-4faf-9a24-1eb071d131d0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 184b33bb-9990-4de4-9374-5c674c4420b4
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    enableLogging: false
+    intervalSeconds: false
+    model: false
+    resolution: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - model: gemini-2.0-flash
+      intervalSeconds: !<float> 2.000000
+      resolution: !<float> 640.000000
+      enableLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">GeminiCardVision — real-world card recognition</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#94A3B8;font-size:11px;\">Needs RemoteServiceGatewayCredentials (Google token) + Extended Permissions.</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input string model = "gemini-2.0-flash" {"hint":"Gemini model id for vision (generateContent)."}'
+    - '// @input float intervalSeconds = 2 {"hint":"Seconds between capture+inference attempts."}'
+    - '// @input float resolution = 640 {"hint":"Camera stream resolution (max 756 on Spectacles 2024)."}'
+    - '// @input bool enableLogging = true {"hint":"Log raw Gemini responses."}'

@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/dd45be4c-cfb2-496d-8211-e04a31ef7416>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e5283b9a-057f-4204-91ce-17b1c55e9ba8
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e5283b9a-057f-4204-91ce-17b1c55e9ba8
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 490c1e98-c680-49de-bcff-b64be9144ca9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/490c1e98-c680-49de-bcff-b64be9144ca9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 4d12108c-c88e-4a74-8713-162e2fbd2215
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    localSize: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - localSize: !<Vec3> {x: 1.000000, y: 1.000000, z: 0.400000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input vec3 localSize = {1,1,0.4} {"hint":"Box collider size in LOCAL space (multiplied by the object scale). Plane is 1x1, so ~1,1,small."}'

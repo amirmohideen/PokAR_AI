@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/7a4e7ff4-e569-4048-9b53-8c16cc28d1e7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ca35e35c-b4f3-471a-8ff5-a5b33cc68b47
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ca35e35c-b4f3-471a-8ff5-a5b33cc68b47
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7ea37c4f-a90f-407a-8408-be41502b1f74
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7ea37c4f-a90f-407a-8408-be41502b1f74>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 08b5cf79-6027-4598-8df1-eb8e5c5b3262
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    animationDuration: false
+    verticalOffset: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - verticalOffset: !<float> 0.000000
+      animationDuration: 0.400000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input float verticalOffset {"hint":"Offset above the target object center"}'
+    - '// @input float animationDuration = 0.4 {"hint":"Duration of scale animation in seconds"}'

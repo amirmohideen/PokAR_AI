@@ -1,0 +1,69 @@
+- !<AssetImportMetadata/c92d973f-6ba6-40f6-a808-d35f0a8c1273>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 74b66f30-56c3-4b3f-aac1-e87d5a9e37d5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 74b66f30-56c3-4b3f-aac1-e87d5a9e37d5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c4d54769-120f-4f43-a6fb-fdd3d202690f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c4d54769-120f-4f43-a6fb-fdd3d202690f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9c1ff2de-5b86-4e05-b092-beaa686c5fd2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    categoryText: false
+    fillBar: false
+    hudRoot: false
+    percentText: false
+    samples: false
+    smoothing: false
+    vision: false
+    wristOffset: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - vision: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      hudRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      percentText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      categoryText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      fillBar: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      wristOffset: !<Vec3> {x: 0.000000, y: 6.000000, z: 4.000000}
+      smoothing: 0.400000
+      samples: !<float> 300.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">HandStrengthBarometer — left-hand HUD</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType vision {"hint":"Card source. When it reports new cards, the barometer recomputes."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject hudRoot {"hint":"Root object of the barometer HUD (positioned on the left wrist)."}'
+    - '// @input Component.Text percentText {"hint":"Text for the win percentage."}'
+    - '// @input Component.Text categoryText {"hint":"Text for the best-hand category."}'
+    - '// @input SceneObject fillBar {"hint":"Optional fill bar object; its local X scale is set to winProbability (0..1)."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input vec3 wristOffset = {0,6,4} {"hint":"Offset from the wrist in cm (x=right, y=up, z=toward viewer)."}'
+    - '// @input float smoothing = 0.4 {"hint":"Position smoothing factor (0..1 per frame; higher = snappier)."}'
+    - '// @input float samples = 300 {"hint":"Monte Carlo samples per evaluation."}'

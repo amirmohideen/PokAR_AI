@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/ed2cad33-44bc-4a2b-9c54-4b1337ffae5e>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 55ae79dc-aa7b-43f5-8156-398490200cd1
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 55ae79dc-aa7b-43f5-8156-398490200cd1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> b84118fa-f537-4252-9c49-c8db1981116f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/39e7a1bc-221c-4e7d-517c-c329bfb288a4>
+  PrefabRemaps:
+    []
+  Name: Plane
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d6fb4448-95f9-44b6-5743-3e1bf59a58a5
+- !<ObjectPrefabAssetData/b84118fa-f537-4252-9c49-c8db1981116f>
+  Prototype: !<ObjectOwner/73f409cf-00f5-4bfe-ac94-a6ba481ef158>
+    PackagePath: ""
+    objects:
+      - !<own> 39e7a1bc-221c-4e7d-517c-c329bfb288a4
+- !<RenderMeshVisual/d6fb4448-95f9-44b6-5743-3e1bf59a58a5>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 57e727b1-a0fb-4e1d-a509-032c7daae800
+  Mesh: !<reference> 6226a9a7-b072-4650-bd63-cb92047aa0f2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

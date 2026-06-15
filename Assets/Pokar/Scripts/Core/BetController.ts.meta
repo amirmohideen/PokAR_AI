@@ -1,0 +1,91 @@
+- !<AssetImportMetadata/6a7dfd37-3dc4-4000-9417-962bb99525fe>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 53228d19-4392-485c-ae0f-256f5add15c6
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 53228d19-4392-485c-ae0f-256f5add15c6
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 796f89c1-319b-4f15-93be-73dd9f798c24
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/796f89c1-319b-4f15-93be-73dd9f798c24>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b6de4a57-d3e6-4956-934a-60c415ee7832
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    betChip: false
+    betText: false
+    chipPrefab: false
+    chipScale: false
+    chipSound: false
+    chipSoundTrack: false
+    chipSpacing: false
+    creditsPerChip: false
+    dragStepCm: false
+    flyArc: false
+    flyDuration: false
+    maxChips: false
+    potAnchor: false
+    potText: false
+    startingStack: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - betChip: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      chipPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      chipScale: !<float> 2.000000
+      creditsPerChip: !<float> 10.000000
+      dragStepCm: !<float> 2.000000
+      chipSpacing: 0.600000
+      maxChips: !<float> 30.000000
+      potAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      flyDuration: 0.450000
+      flyArc: !<float> 3.000000
+      chipSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      chipSoundTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      betText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      potText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      startingStack: !<float> 1000.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">BetController — stack chips to bet</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject betChip {"hint":"Draggable bet chip (handle) with an InteractableManipulation component."}'
+    - '// @input Asset.ObjectPrefab chipPrefab {"hint":"Chip visual prefab cloned to build the stack (no interaction needed)."}'
+    - "// @input float chipScale = 2 {\"hint\":\"Uniform local scale applied to each instantiated stack chip (overrides the prefab's baked scale).\"}"
+    - '// @ui {"widget":"separator"}'
+    - '// @input float creditsPerChip = 10 {"hint":"Credits each stacked chip is worth."}'
+    - '// @input float dragStepCm = 2 {"hint":"Centimetres of upward pull needed to add one chip."}'
+    - '// @input float chipSpacing = 0.6 {"hint":"Vertical spacing between stacked chips (cm)."}'
+    - '// @input float maxChips = 30 {"hint":"Maximum chips that can be stacked in one bet."}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject potAnchor {"hint":"Target the staged chips fly to on Raise/Call (place an empty SceneObject near the pot prefab)."}'
+    - '// @input float flyDuration = 0.45 {"hint":"Seconds for a chip to fly to the pot."}'
+    - '// @input float flyArc = 3 {"hint":"Arc height of the chip toss (cm). 0 = straight line."}'
+    - '// @input Component.AudioComponent chipSound {"hint":"Poker-chip clink sound played when chips fly to the pot (antes, raises, CPU bets)."}'
+    - '// @input Asset.AudioTrackAsset chipSoundTrack {"hint":"Chip-clink audio track. Assigned to the Chip Sound component at runtime if it has none."}'
+    - '// @ui {"widget":"separator"}'
+    - // @input Component.Text betText
+    - // @input Component.Text potText
+    - "// @input float startingStack = 1000 {\"hint\":\"Player's starting chip stack.\"}"

@@ -1,0 +1,122 @@
+- !<ObjectPrefab/a33e0759-4dc4-4294-a477-291a86ea97fb>
+  PackagePath: ""
+  objects:
+    - !<own> aae5db0e-0e79-41cd-814a-b6e508d55d7b
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/1113f9e4-aa0d-4189-9a20-4b352dd3c9e7>
+  PrefabRemaps:
+    []
+  Name: Object_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 08ca8e94-a7be-4700-bf81-26075947c2cc
+  Mesh: !<reference> a106f408-5c12-45c9-988f-011919abd2a3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/420d9a52-7de5-4f49-b605-91fd16591e69>
+  PrefabRemaps:
+    []
+  Name: pokerchip.obj.cleaner.materialmerger.gles
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7584e9e3-d516-4238-bb69-e686e1ced21b
+  Components:
+    []
+- !<SceneObject/7584e9e3-d516-4238-bb69-e686e1ced21b>
+  PrefabRemaps:
+    []
+  Name: Object_2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1113f9e4-aa0d-4189-9a20-4b352dd3c9e7
+- !<SceneObject/9f6a55b2-ea6b-42a1-9fbb-07d00721f13c>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.229120, y: 1.229120, z: 1.229120}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 420d9a52-7de5-4f49-b605-91fd16591e69
+  Components:
+    []
+- !<SceneObject/a02508dc-372e-44db-b62b-7a7148a8158b>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> ae9ed955-d564-47d7-835e-351f67758ce1
+  Components:
+    []
+- !<SceneObject/aae5db0e-0e79-41cd-814a-b6e508d55d7b>
+  PrefabRemaps:
+    - 1113f9e4-aa0d-4189-9a20-4b352dd3c9e7: 1113f9e4-aa0d-4189-65df-b4cad22c3618
+    - 420d9a52-7de5-4f49-b605-91fd16591e69: 420d9a52-7de5-4f49-49fa-6e02e9a6e196
+    - 7584e9e3-d516-4238-bb69-e686e1ced21b: 7584e9e3-d516-4238-4496-19791e312de4
+    - 9f6a55b2-ea6b-42a1-9fbb-07d00721f13c: 9f6a55b2-ea6b-42a1-6044-f82ff8de0ec3
+    - a02508dc-372e-44db-b62b-7a7148a8158b: a02508dc-372e-44db-49d4-858eb757ea74
+    - aae5db0e-0e79-41cd-814a-b6e508d55d7b: aae5db0e-0e79-41cd-7eb5-491af72aa284
+    - ae9ed955-d564-47d7-835e-351f67758ce1: ae9ed955-d564-47d7-7ca1-cae0988a731e
+  Name: poker_chip
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> a02508dc-372e-44db-b62b-7a7148a8158b
+  Components:
+    []
+- !<SceneObject/ae9ed955-d564-47d7-835e-351f67758ce1>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9f6a55b2-ea6b-42a1-9fbb-07d00721f13c
+  Components:
+    []

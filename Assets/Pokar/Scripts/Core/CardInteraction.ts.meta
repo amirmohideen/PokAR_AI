@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/4afb8e48-eba8-485e-8220-30e778fc83e0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 55345907-3b6a-4c87-b684-c85bded5d7f5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 55345907-3b6a-4c87-b684-c85bded5d7f5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 179287fb-1549-4383-956d-dec11782ffbe
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/179287fb-1549-4383-956d-dec11782ffbe>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 98d2b8a1-782b-4e8e-85f4-81535a5b8e83
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cardView: false
+    faceCameraWhileHeld: false
+    homeSlot: false
+    manipulation: false
+    snapDuration: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - manipulation: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      homeSlot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cardView: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      faceCameraWhileHeld: true
+      snapDuration: 0.350000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#60A5FA;\">CardInteraction — grab, reveal to camera, snap-back</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType manipulation {"hint":"The SIK InteractableManipulation on this card. If empty, it is looked up on this object."}'
+    - '// @input SceneObject homeSlot {"hint":"Anchor the card returns to when released. Can be set at runtime via setHomeSlot()."}'
+    - '// @input AssignableType_1 cardView {"hint":"CardView on this card — flipped face-up while held, face-down when returned."}'
+    - '// @input bool faceCameraWhileHeld = true {"hint":"While held, rotate the card so its front faces your camera."}'
+    - '// @input float snapDuration = 0.35 {"hint":"Snap-back duration in seconds."}'
